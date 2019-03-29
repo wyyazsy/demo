@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        table {
+            border: 1px solid black;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        table thead th {
+            border: 1px solid black;
+        }
+        table tbody td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+<table cellpadding="0" cellspacing="0">
+    <thead>
+    <th>序号</th>
+    <th>图书名字</th>
+    <th>图书地址</th>
+    <th>图书数量</th>
+    <th>图书作者</th>
+    </thead>
+    <tbody>
+    <tr th:each="book:${mylist}" >
+
+        <td th:text="${book.bookid}"></td>
+        <td th:text="${book.bookname}"></td>
+        <td th:text="${book.bookaddress}"></td>
+        <!-- 写法一：
+        <td th:text="${entries['scourse']['cname']}"></td>
+        <td th:text="${entries['scourse']['cscore']}"></td>-->
+        <!-- 写法二：
+        <td th:text="*{entries['scourse']['cname']}"></td>
+        <td th:text="*{entries['scourse']['cscore']}"></td>-->
+        <!-- 写法三：-->
+        <td th:text="${book.booknumber}"></td>
+        <td th:text="${book.bookauthor}"></td>
+    </tr>
+    //<li th:each="${Pag}"></li>
+    </tbody>
+
+</table>
+
+<button onclick="add()">前一页</button>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button onclick="desc()">后一页</button>
+</body>
+
+<script>
+    function add() {
+        window.location.href="/selectAll?s=qqq"
+    }
+    function desc() {
+        window.location.href="/selectAll?s=hhh"
+
+    }
+</script>
+</html>

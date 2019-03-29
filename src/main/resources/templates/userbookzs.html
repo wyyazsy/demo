@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        table {
+            border: 1px solid black;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        table thead th {
+            border: 1px solid black;
+        }
+        table tbody td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+<table cellpadding="0" cellspacing="0">
+    <thead>
+    <th>学生证号码</th>
+    <th>图书名字</th>
+
+
+    </thead>
+    <tbody>
+    <tr th:each="userbook:${mylist}" >
+
+        <td th:text="${userbook.studentid}"></td>
+        <td th:text="${userbook.bookname}"></td>
+
+
+
+    </tr>
+    </tbody>
+
+</table>
+
+
+</body>
+
+
+</html>

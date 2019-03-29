@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+</head>
+<body>
+<div id="login">
+    <h1>学生借书</h1>
+
+    <div class="panel-body">
+        <span th:text="${error}"></span>
+    </div>
+    <form method="post" action="http://localhost/userbookadd">
+        请输入学生证号: <input type="text" required="required" placeholder="用户名" name="studentid"></input>
+        请输入书名: <input type="text" required="required" placeholder="用户名" name="name"></input>
+
+        <button class="but" type="submit">确定</button>
+    </form>
+
+</div>
+</body>
+</html>

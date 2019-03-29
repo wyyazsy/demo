@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+</head>
+<body>
+<div id="login">
+    <h1>根据书名查询</h1>
+
+    <div class="panel-body">
+    <span th:text="${error}"></span>
+    </div>
+    <form method="post" action="http://localhost/selectByName">
+       请输入书名: <input type="text" required="required" placeholder="用户名" name="name"></input>
+
+        <button class="but" type="submit">查询</button>
+    </form>
+</div>
+</body>
+</html>
